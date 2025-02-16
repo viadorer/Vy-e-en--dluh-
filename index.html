@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vyřešení dluhů - Okamžitý výkup nemovitostí</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1a365d',
+                        secondary: '#2563eb',
+                        accent: '#f59e0b',
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-sans antialiased bg-gray-50">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-bold text-primary">VyreseniDluhu.cz</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="#jak-to-funguje" class="text-gray-700 hover:text-secondary">Jak to funguje</a>
+                    <a href="#vyhody" class="text-gray-700 hover:text-secondary">Výhody</a>
+                    <a href="#contact-form" class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-amber-600 transition duration-300">Získat nabídku</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-gradient-to-r from-primary to-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="text-white space-y-8">
+                    <h1 class="text-5xl font-bold leading-tight">
+                        🛑 Máte dluhy a vlastníte nemovitost?
+                        <span class="text-accent">Okamžitý výkup je řešení!</span>
+                    </h1>
+                    <p class="text-xl opacity-90">
+                        📉 Zastavíme exekuce, vyplatíme dluhy a zajistíme vám finanční restart.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#contact-form" 
+                           class="bg-accent hover:bg-amber-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition duration-300 transform hover:scale-105">
+                           🔹 ZÍSKAT NABÍDKU
+                        </a>
+                        <a href="#jak-to-funguje" 
+                           class="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg text-lg font-semibold transition duration-300">
+                           Jak to funguje?
+                        </a>
+                    </div>
+                    <div class="flex items-center space-x-4 mt-8">
+                        <div class="bg-white/10 px-4 py-2 rounded-lg">
+                            <span class="text-2xl font-bold">500+</span>
+                            <p class="text-sm opacity-75">Spokojených klientů</p>
+                        </div>
+                        <div class="bg-white/10 px-4 py-2 rounded-lg">
+                            <span class="text-2xl font-bold">48h</span>
+                            <p class="text-sm opacity-75">Rychlé řešení</p>
+                        </div>
+                        <div class="bg-white/10 px-4 py-2 rounded-lg">
+                            <span class="text-2xl font-bold">100%</span>
+                            <p class="text-sm opacity-75">Diskrétnost</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative hidden lg:block">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3" 
+                         alt="Moderní dům" 
+                         class="rounded-2xl shadow-2xl transform -rotate-3 hover:rotate-0 transition duration-500">
+                    <div class="absolute -bottom-8 -left-8 bg-white p-6 rounded-xl shadow-xl transform hover:scale-105 transition duration-300">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-green-100 p-3 rounded-full">
+                                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-gray-800 font-semibold">Garantujeme férové jednání</p>
+                                <p class="text-gray-500 text-sm">Tisíce úspěšných výkupů</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem & Solution Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">📌 Proč řešit dluhy výkupem nemovitosti?</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Nabízíme rychlé a efektivní řešení vaší situace</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gray-50 rounded-xl p-6 transform hover:-translate-y-2 transition duration-300">
+                    <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-gavel text-red-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Hrozí vám exekuce?</h3>
+                    <p class="text-gray-600">Okamžitě zastavíme exekuci a zabráníme dražbě vaší nemovitosti</p>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl p-6 transform hover:-translate-y-2 transition duration-300">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-home text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Problémy s hypotékou?</h3>
+                    <p class="text-gray-600">Pomůžeme vám vyplatit hypotéku a získat nový start</p>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl p-6 transform hover:-translate-y-2 transition duration-300">
+                    <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-university text-yellow-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Banka vás odmítla?</h3>
+                    <p class="text-gray-600">Nezáleží na vaší bonitě, pomůžeme vám i bez banky</p>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl p-6 transform hover:-translate-y-2 transition duration-300">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-bolt text-green-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Potřebujete to rychle?</h3>
+                    <p class="text-gray-600">Vyřídíme vše do 48 hodin, bez zbytečného čekání</p>
+                </div>
+            </div>
+
+            <div class="mt-16 bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-white">
+                <div class="flex flex-col lg:flex-row items-center justify-between">
+                    <div class="mb-6 lg:mb-0">
+                        <h3 class="text-2xl font-bold mb-2">💡 Okamžitý výkup za férovou cenu!</h3>
+                        <p class="text-lg opacity-90">🔥 Peníze do 48 hodin, právní servis zdarma</p>
+                    </div>
+                    <a href="#contact-form" class="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 transform hover:scale-105">
+                        Získat nabídku ihned
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="jak-to-funguje" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Jak to funguje?</h2>
+                <p class="text-xl text-gray-600">Jednoduchý proces ve 4 krocích</p>
+            </div>
+
+            <div class="relative">
+                <!-- Connecting Line -->
+                <div class="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gray-200 -translate-y-1/2"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+                    <!-- Step 1 -->
+                    <div class="bg-white rounded-xl p-6 shadow-lg relative">
+                        <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold absolute -top-6 left-1/2 transform -translate-x-1/2">1</div>
+                        <div class="pt-8">
+                            <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3" 
+                                 alt="Formulář" class="w-full h-32 object-cover rounded-lg mb-4">
+                            <h3 class="text-xl font-semibold mb-2">Vyplníte formulář</h3>
+                            <p class="text-gray-600">Pošlete základní informace o vaší nemovitosti</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="bg-white rounded-xl p-6 shadow-lg relative">
+                        <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold absolute -top-6 left-1/2 transform -translate-x-1/2">2</div>
+                        <div class="pt-8">
+                            <img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?ixlib=rb-4.0.3" 
+                                 alt="Nabídka" class="w-full h-32 object-cover rounded-lg mb-4">
+                            <h3 class="text-xl font-semibold mb-2">Obdržíte nabídku</h3>
+                            <p class="text-gray-600">Do 24 hodin vám zašleme nezávaznou cenovou nabídku</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="bg-white rounded-xl p-6 shadow-lg relative">
+                        <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold absolute -top-6 left-1/2 transform -translate-x-1/2">3</div>
+                        <div class="pt-8">
+                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3" 
+                                 alt="Podmínky" class="w-full h-32 object-cover rounded-lg mb-4">
+                            <h3 class="text-xl font-semibold mb-2">Domluvíme podmínky</h3>
+                            <p class="text-gray-600">Vše včetně právního servisu a možnosti zpětného pronájmu</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="bg-white rounded-xl p-6 shadow-lg relative">
+                        <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold absolute -top-6 left-1/2 transform -translate-x-1/2">4</div>
+                        <div class="pt-8">
+                            <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3" 
+                                 alt="Platba" class="w-full h-32 object-cover rounded-lg mb-4">
+                            <h3 class="text-xl font-semibold mb-2">Dostanete peníze</h3>
+                            <p class="text-gray-600">Převod peněz na váš účet do 48 hodin</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="#contact-form" 
+                       class="inline-flex items-center bg-accent text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-amber-600 transition duration-300 transform hover:scale-105">
+                       <span>👉 Získat okamžitou nabídku</span>
+                       <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                       </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="vyhody" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Výhody výkupu oproti běžnému prodeji</h2>
+                <p class="text-xl text-gray-600">Proč si vybrat právě nás?</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Benefit 1 -->
+                <div class="group">
+                    <div class="bg-white rounded-xl p-6 shadow-lg h-full transform transition duration-500 hover:scale-105">
+                        <div class="relative h-48 mb-6 overflow-hidden rounded-lg">
+                            <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3" 
+                                 alt="Rychlé peníze"
+                                 class="w-full h-full object-cover transform transition duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-primary/50 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h3 class="text-xl font-bold">💰 Rychlé peníze</h3>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">Dostanete peníze na účet do 48 hodin. Žádné měsíce čekání jako u běžného prodeje.</p>
+                    </div>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="group">
+                    <div class="bg-white rounded-xl p-6 shadow-lg h-full transform transition duration-500 hover:scale-105">
+                        <div class="relative h-48 mb-6 overflow-hidden rounded-lg">
+                            <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3" 
+                                 alt="Bez papírování"
+                                 class="w-full h-full object-cover transform transition duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-primary/50 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h3 class="text-xl font-bold">📝 Bez papírování</h3>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">Všechny dokumenty a právní záležitosti vyřídíme za vás. Maximální pohodlí.</p>
+                    </div>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="group">
+                    <div class="bg-white rounded-xl p-6 shadow-lg h-full transform transition duration-500 hover:scale-105">
+                        <div class="relative h-48 mb-6 overflow-hidden rounded-lg">
+                            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3" 
+                                 alt="Žádné starosti"
+                                 class="w-full h-full object-cover transform transition duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-primary/50 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h3 class="text-xl font-bold">🚫 Žádné starosti</h3>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">Exekuce, zástavy nebo právní problémy? Vyřešíme vše za vás.</p>
+                    </div>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div class="group">
+                    <div class="bg-white rounded-xl p-6 shadow-lg h-full transform transition duration-500 hover:scale-105">
+                        <div class="relative h-48 mb-6 overflow-hidden rounded-lg">
+                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3" 
+                                 alt="Zpětný pronájem"
+                                 class="w-full h-full object-cover transform transition duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-primary/50 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h3 class="text-xl font-bold">🏡 Možnost zpětného pronájmu</h3>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">Můžete zůstat bydlet ve své nemovitosti díky možnosti zpětného pronájmu.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">✅ Reference našich klientů</h2>
+                <p class="text-xl text-gray-600">Již jsme pomohli stovkám klientů v celé ČR</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center">
+                            <span class="text-xl font-bold text-gray-600">JK</span>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="font-semibold">Jan K.</h3>
+                            <p class="text-gray-500 text-sm">Praha</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"🗣️ Díky okamžitému výkupu jsem se zbavil dluhů a mohl začít znovu bez obav. Peníze jsem měl na účtu do dvou dnů!"</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center">
+                            <span class="text-xl font-bold text-gray-600">MN</span>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="font-semibold">Marie N.</h3>
+                            <p class="text-gray-500 text-sm">Brno</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"💪 Profesionální přístup a rychlé jednání. Vše proběhlo bez problémů a mohla jsem dál bydlet ve svém bytě díky zpětnému pronájmu."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white rounded-xl p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center">
+                            <span class="text-xl font-bold text-gray-600">PT</span>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="font-semibold">Petr T.</h3>
+                            <p class="text-gray-500 text-sm">Ostrava</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"👍 Když mi hrozila exekuce, nevěděl jsem kudy kam. Díky VyreseniDluhu.cz jsem vše vyřešil během týdne a mohl jsem začít nový život bez dluhů."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#contact-form" 
+                   class="inline-flex items-center bg-accent text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-amber-600 transition duration-300 transform hover:scale-105">
+                   Chci také vyřešit své dluhy
+                   <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                   </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact-form" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">📩 Získejte férovou nabídku za vaši nemovitost!</h2>
+                <p class="text-xl text-gray-600">Vyřešíme vaši situaci rychle a diskrétně</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Contact Form -->
+                <div class="lg:col-span-2">
+                    <div class="bg-white rounded-xl shadow-xl p-8">
+                        <form id="propertyForm" class="space-y-6" method="post">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Vaše jméno</label>
+                                    <input type="text" id="name" name="name" required 
+                                           class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition duration-200">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Váš email</label>
+                                    <input type="email" id="email" name="email" required 
+                                           class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition duration-200">
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Telefonní číslo</label>
+                                    <input type="tel" id="phone" name="phone" required 
+                                           class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition duration-200">
+                                </div>
+                                <div>
+                                    <label for="location" class="block text-sm font-medium text-gray-700 mb-1">Lokalita nemovitosti</label>
+                                    <input type="text" id="location" name="location" required 
+                                           class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition duration-200">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="propertyType" class="block text-sm font-medium text-gray-700 mb-1">Typ nemovitosti</label>
+                                    <select id="propertyType" name="propertyType" required 
+                                            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition duration-200">
+                                        <option value="">Vyberte typ nemovitosti</option>
+                                        <option value="byt">Byt</option>
+                                        <option value="dum">Dům</option>
+                                        <option value="pozemek">Pozemek</option>
+                                        <option value="komercni">Komerční nemovitost</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="gdpr" class="flex items-center text-sm text-gray-700">
+                                        <input type="checkbox" id="gdpr" name="gdpr" required 
+                                               class="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary mr-2">
+                                        <span>Souhlasím se zpracováním osobních údajů</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 gap-6">
+                                <div>
+                                    <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Další informace</label>
+                                    <textarea id="message" name="message" rows="4" 
+                                              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition duration-200"
+                                              placeholder="Např. velikost nemovitosti, stav, aktuální situace..."></textarea>
+                                </div>
+                            </div>
+
+                            <button type="submit" 
+                                    class="w-full bg-accent hover:bg-amber-600 text-white font-bold py-4 px-8 rounded-lg transition duration-300 transform hover:scale-105 flex items-center justify-center">
+                                <span>Odeslat poptávku</span>
+                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="lg:col-span-1">
+                    <div class="bg-gradient-to-br from-primary to-secondary rounded-xl shadow-xl p-8 text-white h-full">
+                        <h3 class="text-2xl font-bold mb-6">Potřebujete poradit?</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-phone text-xl"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <p class="text-sm opacity-75">Zavolejte nám</p>
+                                    <a href="tel:774XXXXXX" class="text-xl font-bold hover:text-accent transition duration-300">774 XXX XXX</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <p class="text-sm opacity-75">Napište nám</p>
+                                    <a href="mailto:info@vyresenidluhu.cz" class="text-xl font-bold hover:text-accent transition duration-300">info@vyresenidluhu.cz</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-clock text-xl"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <p class="text-sm opacity-75">Pracovní doba</p>
+                                    <p class="text-xl font-bold">Nonstop 24/7</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 p-6 bg-white/10 rounded-lg">
+                            <p class="text-lg font-semibold mb-2">💡 Věděli jste?</p>
+                            <p class="opacity-90">Naši specialisti jsou vám k dispozici 24 hodin denně, 7 dní v týdnu. Jsme tu pro vás i o víkendech.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">VyreseniDluhu.cz</h3>
+                    <p class="text-gray-400">Pomáháme lidem zbavit se dluhů a začít nový život bez finančních starostí.</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Rychlý kontakt</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>
+                            <a href="tel:774XXXXXX" class="hover:text-accent transition duration-300">
+                                <i class="fas fa-phone mr-2"></i>774 XXX XXX
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:info@vyresenidluhu.cz" class="hover:text-accent transition duration-300">
+                                <i class="fas fa-envelope mr-2"></i>info@vyresenidluhu.cz
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Menu</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#jak-to-funguje" class="hover:text-accent transition duration-300">Jak to funguje</a></li>
+                        <li><a href="#vyhody" class="hover:text-accent transition duration-300">Výhody</a></li>
+                        <li><a href="#contact-form" class="hover:text-accent transition duration-300">Kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 VyreseniDluhu.cz - Všechna práva vyhrazena</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
